@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FX Rates</string>
+    <string name="rate_alerts_channel">Rate Alerts</string>
+</resources>
