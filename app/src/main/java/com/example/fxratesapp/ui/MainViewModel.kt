@@ -44,7 +44,7 @@ class MainViewModel : ViewModel() {
             val end = LocalDate.now()
             val start = end.minusDays(days)
             val ts = repo.getTimeSeries(base, listOf(target), start, end)
-            val entries = ts.rates.toSortedMap().mapIndexed { idx, entry ->
+            val entries = ts.rates.toSortedMap().entries.mapIndexed { idx, entry ->
                 val rate = entry.value[target] ?: 0.0
                 Entry(idx.toFloat(), rate.toFloat())
             }
